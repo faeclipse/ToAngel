@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <div id="balloons"></div>
+    <div id="bat-cursor">
+        🦇
+    </div>
+    <style>
+        #bat-cursor {
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    animation: flap 0.3s infinite alternate;
+}
+@keyframes flap {
+    0% { transform: translate(-50%, -50%) rotate(-10deg); }
+    100% { transform: translate(-50%, -50%) rotate(10deg); }
+}
+        body {
+            font-family: 'Copperplate';
+            background: linear-gradient(135deg, rgba(255, 239, 186, 1) 0%, rgba(244, 194, 242, 1) 100%, rgba(186, 224, 255, 1) 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: flex;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 100px;
+            border-radius: 50%;
+            margin: 0 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #f5b0d6;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h2 {
+            color: #b0d6f5;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .section p {
+            color: #333;
+            font-size: 1rem;
+        }
+        a {
+            color: #ff6fa1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        iframe {
+            margin: 10px 0;
+            border: none;
+            border-radius: 12px;
+        }
+        .footer {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer img {
+    width: 80px; /* Increased size */
+    height: 80px;
+    border-radius: 15%; /* Rounded edges */
+    animation: twirl 2s linear infinite; /* Continuous twirling */
+}
+
+@keyframes twirl {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../bd/haobin.jpg" alt="haobin">
+            <h1>Happy Birthday!</h1>
+            <img src="../bd/haobin2.jpg" alt="haobin2">
+        </div>
+
+        <p>From the best wife in the world to her perfect, amazing, beautiful, sweet angel 🤍</p>
+
+        <div class="section">
+            <h2>⋆｡‧˚ʚ💌ɞ˚‧｡⋆</h2>
+            <p><a href="..\bd\bdmsg.html">birthday message</a></p>
+            <p><a href="..\bd\iloveyou.html">reasons why i love you</a></p>
+            <p><a href="..\bd\plans.html">things i can't wait to experience with you</a></p>
+            <p><a href="..\bd\fightinggg.html">for when hen you feel sad, discouraged  and anxious</a></p>
+        </div>
+
+        <div class="section">
+            <h2>⋆.˚✮🎧✮˚.⋆</h2>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4ki0EcH3qL0DEbXqZIz1GI?utm_source=generator" width="70%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2BEvBdlo6JMWaJzd1DTkUl?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="section">
+            <h2>˙ ✩°˖୨ৎ ⋆｡˚꩜</h2>
+            <iframe width="300" height="169" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="section">
+            <h2>˙ 🫧𓇼𓏲*ੈ✩‧₊˚🎐 </h2>
+        </div>
+
+        <div class="footer">
+            <img src="../bd/hao1.jpg" alt="hao">
+            <img src="../bd/hanini.jpg" alt="hanini">
+            <img src="../bd/hao2.jpg" alt="hao">
+        </div>
+    </div>
+    <script>
+
+
+        document.addEventListener('mousemove', (e) => {
+    const bat = document.getElementById('bat-cursor');
+    bat.style.left = e.pageX + 'px';
+    bat.style.top = e.pageY + 'px';
+});
+        </script>
+</body>
+</html>
