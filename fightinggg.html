@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Message</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, rgba(255, 239, 186, 1) 0%, rgba(244, 194, 242, 1) 50%, rgba(186, 224, 255, 1) 100%);
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .envelope-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .envelope {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background: url('pics/envelope.jpg') no-repeat center center;
+            background-size: cover;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .envelope:hover {
+            transform: rotate(-5deg);
+        }
+
+        .letter {
+            position: absolute;
+            top: 220px;
+            left: 50%;
+            width: 300px;
+            height: auto;
+            background: #fff;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        .envelope.opened ~ .letter {
+            top: 50%;
+            opacity: 1;
+        }
+
+        .letter.returned {
+            top: 220px;
+            opacity: 0;
+        }
+
+        .link {
+            margin-top: 20px;
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: url('pics/hao.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+ 
+    </style>
+</head>
+<body>
+    <div class="envelope-container">
+        <div class="envelope" onclick="toggleEnvelope(this)"></div>
+        <div class="letter" onclick="returnLetter(this)">
+            <p>
+                i don't know if this would mean much BUT!!! <br>
+                i know your life often gets heavy and overwhelming but i want you to know im always here to support you through everything. when you feel sad, know that your happiness matters to me and i'll do anything to make you happy. <br>
+                when you're discouraged and anxious remember that you've already overcome so much and i believe in you with all my heart, these moments will pass!<br>
+                you're so capable and loved beyond measure, take one step at a time and i'll be right by your side through it all 💕 <br>
+                i love you always! 💌
+            </p>
+        </div>
+    </div>
+
+    <div class = "link"> 
+        <a href="index.html" class="button">➻</a>
+    </div>
+    
+    <script>
+        function toggleEnvelope(envelope) {
+            const letter = document.querySelector('.letter');
+            if (!envelope.classList.contains('opened')) {
+                envelope.classList.add('opened');
+                letter.classList.remove('returned');
+            }
+        }
+
+        function returnLetter(letter) {
+            const envelope = document.querySelector('.envelope');
+            letter.classList.add('returned');
+            envelope.classList.remove('opened');
+        }
+    </script>
+</body>
+</html>
