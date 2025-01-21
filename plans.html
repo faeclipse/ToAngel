@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans with You</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, rgba(255, 239, 186, 1) 0%, rgba(244, 194, 242, 1) 50%, rgba(186, 224, 255, 1) 100%);
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #5b5b5b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #ff6fa1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .plans-container {
+            max-width: 800px;
+            width: 90%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .plan-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .plan-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .plan-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .plan-card h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: #ff85c4;
+        }
+
+        .plan-card p {
+            font-size: 1rem;
+            margin: 0 10px 15px;
+            color: #333;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .plan-card h2 {
+                font-size: 1.2rem;
+            }
+            .plan-card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Plans with You 🌸</h1>
+    <div class="plans-container">
+        <div class="plan-card">
+            <img src="pics/cottage.jpg" alt="Cottage">
+            <h2>Book a Cottage</h2>
+            <p>(Salalah, Akwakh Razat)</p>
+        </div>
+        <div class="plan-card">
+            <img src="pics/beach.jpg" alt="Beach">
+            <h2>Go to Beaches</h2>
+            <p>Visit all the beaches and have picnics!</p>
+        </div>
+        <div class="plan-card">
+            <img src="pics/waterfall.jpg" alt="Waterfall">
+            <h2>Visit Darbat Waterfall</h2>
+            <p>Explore the beautiful Darbat waterfall together.</p>
+        </div>
+        <div class="plan-card">
+            <img src="pics/shopping.jpg" alt="Shopping">
+            <h2>Do a Lot of Shopping</h2>
+            <p>Shop till we drop with lots of fun! 🛍️</p>
+        </div>
+        <div class="plan-card">
+            <img src="pics/pool.jpg" alt="Pool">
+            <h2>Book a Private Pool</h2>
+            <p>Relax and have fun in a private pool.</p>
+        </div>
+        <div class="plan-card">
+            <img src="pics/piercing.jpg" alt="Piercing">
+            <h2>Possibly Get Piercings</h2>
+            <p>A spontaneous and exciting plan!</p>
+        </div>
+        <div class="plan-card">
+            <img src="pics/desert.jpg" alt="Desert">
+            <h2>Go to the Desert</h2>
+            <p>Star gaze under the beautiful desert sky.</p>
+        </div>
+        <div class="plan-card">
+            <img src="pics/seasonal.jpg" alt="Seasonal Activities">
+            <h2>Seasonal Activities</h2>
+            <p>Enjoy a variety of seasonal adventures.</p>
+        </div>
+    </div>
+</body>
+</html>
